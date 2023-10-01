@@ -29,6 +29,9 @@
         grid (rw/random-walk starting-grid start-point 1000)]
     (draw-grid grid cell-size)))
 
+;; clj-kondo seems to have a problem with this macro, and
+;; yells at me that dungeon-doodle is an unresolved symbol.
+;; I'm not sure how to fix this, so I'm just going to ignore
 #_{:clj-kondo/ignore [:unresolved-symbol]}
 (q/defsketch dungeon-doodle
   :host "app"
